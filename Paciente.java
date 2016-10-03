@@ -5,15 +5,12 @@
 *Paciente.java
 *****************************/
 
-public class Paciente extends Comparable(){
+public class Paciente{
 	private String nombre;
 	private String sintoma;
 	private String codigo;
 
-	public Paciente(String nombre, String sintoma, String codigo){
-		this.nombre=nombre;
-		this.sintoma=sintoma;
-		this.codigo=codigo;
+	public Paciente(){
 	}
 
 	public void setNombre(String nombre){
@@ -32,7 +29,7 @@ public class Paciente extends Comparable(){
 		return nombre;
 	}
 
-	public Stirng getSintoma(){
+	public String getSintoma(){
 		return sintoma;
 	}
 
@@ -46,9 +43,9 @@ public class Paciente extends Comparable(){
 	//		   0 si la urgencia de ambos pacientes es igual
 	//		  -1 si es mas urgente atender al otro paciente
 	public int compareTo(Paciente p){
-		if(this.codigo<p.getNombre())
+		if(p.getCodigo().compareTo(codigo)<0)
 			return 1;
-		else if(this.codigo==p.getNombre())
+		else if(p.getCodigo().compareTo(codigo)==0)
 			return 0;
 		else
 			return -1;

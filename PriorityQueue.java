@@ -5,11 +5,11 @@
 *PriorityQueue
 *****************************/
 
-public interface PriorityQueue<E extends Comparable<E>>{
-	public getFirst();
-	public E remove();
+public interface PriorityQueue<E>{
+	public Object getFirst();
+	public Object remove();
 	public void add(E value);
 	public boolean isEmpty();
 	public int size();
-	public void clear():
+	public void clear();
 }
